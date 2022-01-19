@@ -308,30 +308,9 @@ Using online help and other resources, explain what each argument to plot does.
 <br>
 
 
-## Exercise 4.1 Turn a string into a list
-Use a for-loop to convert the string `hello` into a list of letters  `['h', 'e', 'l', 'l', 'o']`
 
-Hint: Before your for loop, create an empty list to add characters to like this: `my_list = []`
 
-<details>
-<summary>Solution
-</summary>
-
-```python
-my_list = []
-for char in 'hello':
-    my_list.append(char)
-print(my_list)
-```
-
-</details>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## Exercise 4.2 Slicing from the end
+## Exercise 4.1 Slicing from the end
 You want to access the last 2 characters of this string and the last 2 entries in this list using the same square brackets. What would need to go inside the square brackets?
 
 ```python
@@ -354,7 +333,7 @@ lst[?:?]
 <br>
 <br>
 
-## Exercise 4.3 Non-continuous slices
+## Exercise 4.2 Non-continuous slices
 You can include a third argument inside the square brackets to set the step size and only take every nth element from the list.
 
 ```python
