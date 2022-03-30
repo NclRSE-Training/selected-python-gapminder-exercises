@@ -33,7 +33,7 @@ age = age - 20
 
 ## Exercise 1.2
 
-What does this program print out?
+Python allows you to assign multiple values to multiple variables in one line by separating the variables and values with commas. What does the following program print out? What does this program print out?
 
 ```python
 first, second = 'Grace', 'Hopper'
@@ -311,21 +311,29 @@ Using online help and other resources, explain what each argument to plot does.
 
 
 ## Exercise 4.1 Slicing from the end
-You want to access the last 2 characters of this string and the last 2 entries in this list using the same square brackets. What would need to go inside the square brackets?
+Use slicing to access only the last four characters of a string or entries of a list. Would your solution work regardless of whether you knew beforehand the length of the string or list (e.g. if you wanted to apply the solution to a set of lists of different lengths)? If not, try to change your approach to make it more robust.
 
 ```python
-str = 'Observation date: 02-Feb-2013'
-lst = [['fluorine', 'F'], ['chlorine', 'Cl'], ['bromine', 'Br']]
+string_for_slicing = 'Observation date: 02-Feb-2013'
+list_for_slicing = [['fluorine', 'F'],
+                    ['chlorine', 'Cl'],
+                    ['bromine', 'Br'],
+                    ['iodine', 'I'],
+                    ['astatine', 'At']]
+```
+Output:
 
-str[?:?]
-lst[?:?]
+```'2013'
+[['chlorine', 'Cl'], ['bromine', 'Br'], ['iodine', 'I'], ['astatine', 'At']]
 ```
 
 <details>
 <summary>Solution
 </summary>
 
-`[-2:]`
+string_for_slicing[-4:]
+list_for_slicing[-4:]
+
 </details>
 <br>
 <br>
@@ -363,21 +371,20 @@ How would you get every other element, starting from the second element? i.e.  `
 <br>
 
 
-## Exercise 5.1 Computing powers with loops
-Exponentiation is built into Python:
-``` 5 ** 3``` gives `125`
-
-Can you write a loop that would do the same? You may want to use `range`
-
+## Exercise 5.1 
+Using range, write a loop that uses range to print the first 3 natural numbers:
+```
+1
+2
+3
+```
 <details>
 <summary>Solution
 </summary>
 
 ```python
-result = 1
-for number in range(0,3):
-    result = result * 5
-print(result)
+for number in range(1, 4):
+    print(number)
 ```
 
 
@@ -388,23 +395,42 @@ print(result)
 <br>
 <br>
 
-## Exercise 5.2 Reverse a string
-Two strings can be concatenated using `+` e.g. `'take' + 'away'` would give `'takeaway'`. Write a loop that takes a string and produces a new string with the characters in reverse order so `Newton` becomes `notweN`.
-
-Hint: create two variables, one for the new string and one for the original. Concatenating adds onto the end of the string, so plan ahead what order you want to add characters from the original string to the new one.
+## Exercise 5.2 
+How many times is the body of the loop executed?
+```
+word = 'oxygen'
+for char in word:
+    print(char)
+```
 
 <details>
 <summary>Solution
 </summary>
 
-```python
-newstring = ''
-oldstring = 'Newton'
-for char in oldstring:
-    newstring = char + newstring
-print(newstring)
-```
+6
 
+
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+##Exercise 5.3
+Write a loop that calculates the sum of elements in a list by adding each element and printing the final value, so [124, 402, 36] prints 562
+
+<details>
+<summary>Solution
+</summary>
+
+```
+numbers = [124, 402, 36]
+summed = 0
+for num in numbers:
+summed = summed + num
+print(summed)
+```
 
 </details>
 <br>
@@ -603,6 +629,8 @@ if not not True:
 
 ## Exercise 7.4 Counting vowels
 Write a loop that counts the number of vowels in a character string. Test it on as many different words and sentences as you have time for.
+
+Hint: You might want to use an `if` statement inside a `for` loop. Start by saving all vowels in a variable, e.g. `vowels = 'aeiouAEIOU'`.
 
 <details>
 <summary>Solution
