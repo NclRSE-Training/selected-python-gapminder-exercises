@@ -155,7 +155,7 @@ What is `element[-1]` and `element[-2]`?
 
 <br>
 <br>
-Given those answers, explain what element[1:-1] does.
+Given those answers, explain what `element[1:-1]` does.
 
 <details>
 <summary>Solution
@@ -169,7 +169,6 @@ Creates a substring from index 1 up to (not including) the final index, effectiv
 <br>
 <br>
 
-Rewrite `element[3:6]` (last 3 characters) to work with any length string.
 
 How can we rewrite the slice for getting the last three characters of element (`element[3:6]`), so that it works even if we assign a different string to element? 
 
@@ -292,7 +291,9 @@ Using online help and other resources, explain what each argument to plot does.
 <details>
 <summary>Solution
 </summary>
-`https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html`
+ 
+ `https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html`   
+`https://pandas.pydata.org/pandas-docs/version/0.25.0/reference/api/pandas.DataFrame.plot.scatter.html`
 <br>
 `kind` - As seen already this determines the kind of plot to be drawn.
 <br>
@@ -417,7 +418,7 @@ for char in word:
 <br>
 <br>
 
-##Exercise 5.3
+## Exercise 5.3
 Write a loop that calculates the sum of elements in a list by adding each element and printing the final value, so [124, 402, 36] prints 562
 
 <details>
